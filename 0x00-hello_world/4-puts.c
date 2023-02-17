@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * Main - Entry point
+ * main - Entry point
  * A c program that prints an exact word with put function
  * Return: It gives 0
  */
