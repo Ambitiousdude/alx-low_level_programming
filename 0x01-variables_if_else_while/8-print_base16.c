@@ -16,6 +16,7 @@ int main(void)
 	while (ch < 'g')
 	{
 		putchar(ch);
+		ch++;
 	}
 	putchar('\n');
 
