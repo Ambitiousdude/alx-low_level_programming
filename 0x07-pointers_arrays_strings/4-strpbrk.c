@@ -10,21 +10,25 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int i = 0, j;
+	int i, j;
+	char *p;
 
-	while (s[i] != '\0') /*iterate through string*/
+	i = 0;
+	while (s[i] != '\0')
 	{
-
-		for (j = 0; accept[j] != '\0'; j++) /* iterate through target */
+		j = 0;
+		while (accept[j] != '\0')
 		{
-			if (s[i] == accept[j]) /* stop at first match */
+			if (accept[j] == s[i])
 			{
-				s = &s[i]; /* set pointer to first occurence */
-				return (s);
+				p = &s[i];
+				return (p);
 			}
+			j++;
 		}
 		i++;
 	}
-	return (NULL); /* return NULL if no matches */
 
+	return (0);
 }
+
