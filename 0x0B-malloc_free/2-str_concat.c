@@ -36,16 +36,14 @@ char *str_concat(char *s1, char *s2)
 
 		return (NULL);
 
-	while (i < len1)
+	for (i = 0; i < len1; i++)
 	{
 		array[i] = s1[i];
-		i++;
 	}
-	while (j < len2)
+	for (j = 0; j < len2; j++)
 	{
 		array[i] = s2[j];
 		i++;
-		j++;
 	}
 	array[i] = '\0';
 	return (array);
